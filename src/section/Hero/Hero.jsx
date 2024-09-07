@@ -56,10 +56,10 @@ function Hero({ language, toggleLanguage }) {
           {language === "en" ? "Frontend Developer" : "Frontend-kehittäjä"}
         </h2>
         <span>
-          <a type="twitter" href="https://twitter.com/" target="_blank">
+          <a type="twitter" href="https://x.com/Petrik_Dev" target="_blank">
             <img src={twitterIcon} alt="Twitter icon" />
           </a>
-          <a type="github" href="https://github.com/" target="_blank">
+          <a type="github" href="https://github.com/PetriK93" target="_blank">
             <img src={githubIcon} alt="Github icon" />
           </a>
           <a type="linkedin" href="https://linkedin.com/" target="_blank">
