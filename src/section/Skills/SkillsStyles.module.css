@@ -11,6 +11,8 @@
 
   img {
     width: 20px;
+    height: 20px;
+    aspect-ratio: 1 / 1;
   }
 }
 
@@ -30,6 +32,7 @@
   justify-content: center;
   align-self: center;
   row-gap: 35px;
+  max-width: 34ch;
 }
 
 .softSkillsList {
@@ -38,7 +41,7 @@
   justify-content: center;
   row-gap: 35px;
   align-items: center;
-  max-width: 29ch;
+  max-width: 34ch;
   align-self: center;
 }
 

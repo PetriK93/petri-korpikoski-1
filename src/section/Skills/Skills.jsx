@@ -72,8 +72,8 @@ function Skills({ language, toggleLanguage }) {
           src={reaperIcon}
           skill={
             language === "en"
-              ? "Reaper (Audio production)."
-              : "Reaper (Äänituotanto)."
+              ? "Reaper DAW (Audio production)."
+              : "Reaper DAW (Äänituotanto)."
           }
         />
         <SkillList
@@ -112,7 +112,7 @@ function Skills({ language, toggleLanguage }) {
           src={checkMarkIcon}
           skill={
             language === "en"
-              ? "Native level english."
+              ? "Native level english in both reading and speaking."
               : "Englanti on käytännössä toinen äidinkieli."
           }
         />
@@ -137,7 +137,7 @@ function Skills({ language, toggleLanguage }) {
           src={checkMarkIcon}
           skill={
             language === "en"
-              ? "Well articulated."
+              ? "Well articulated and I can easily convey my thought processes to others."
               : "Hyvä artikuloimaan omaa ajatusprosessia muille."
           }
         />
@@ -147,6 +147,14 @@ function Skills({ language, toggleLanguage }) {
             language === "en"
               ? "Good At Finding Relevant Information autonomously."
               : "Hyvä etsimään ja löytämään aihealueeseen liittyvää oleellista informaatiota itsenäisesti."
+          }
+        />
+        <SkillList
+          src={checkMarkIcon}
+          skill={
+            language === "en"
+              ? "Empathetic towards my co-workers. I always help when I can."
+              : "Empaattinen työkavereitani kohtaan. Autan aina kun vain pystyn."
           }
         />
       </div>

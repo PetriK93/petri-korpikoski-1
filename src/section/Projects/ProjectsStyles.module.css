@@ -8,6 +8,9 @@
     align-self: center;
     background-color: var(--project-card-bg);
     border-radius: 20px;
+    width: 250px;
+    height: 250px;
+    aspect-ratio: 1 / 1;
   }
 
   h3 {

@@ -19,7 +19,7 @@
   justify-content: center;
   gap: 20px;
   text-align: center;
-  height: 100dvh;
+  height: 100vh;
   min-height: 500px;
 
   .hero {
@@ -37,6 +37,8 @@
 
       img {
         width: 30px;
+        height: 30px;
+        aspect-ratio: 1 / 1;
       }
     }
   }
@@ -75,8 +77,10 @@
 
 .colorMode {
   position: absolute;
-  right: 5;
+  right: -25px;
+  height: 25px;
   width: 25px;
+  aspect-ratio: 1 / 1;
 }
 
 .colorMode:hover {
@@ -86,12 +90,14 @@
 .langSwitchContainer {
   position: fixed;
   top: 7px;
-  right: 7px;
+  right: 20px;
   z-index: 99;
 }
 
 .langSwitch {
   width: 45px;
+  height: 45px;
+  aspect-ratio: 1 / 1;
   cursor: pointer;
 }
 
@@ -263,12 +269,15 @@ h2:hover::after {
     0 0 200px var(--button-gradient-color);
 }
 
-@media (width < 800px) {
+@media (min-width: 320px) {
   .container {
-    .hero {
-      max-width: 200px;
-      width: 200px;
-    }
+    margin-top: 20px;
+  }
+  .hero {
+    max-width: 200px;
+    width: 200px;
+    height: auto;
+    aspect-ratio: 1 / 1;
   }
 
   .colorModeContainer::after,
@@ -282,14 +291,139 @@ h2:hover::after {
     filter: blur(1.5rem);
   }
 
+  .colorMode {
+    right: 255px;
+    top: 3px;
+  }
+
   h2::after {
     max-width: 220px;
   }
 }
 
-@media (width >= 800px) {
+@media (min-width: 340px) {
   .container {
-    flex-direction: row-reverse;
+    margin-top: 20px;
+  }
+  .hero {
+    max-width: 200px;
+    width: 200px;
+  }
+
+  .colorModeContainer::after,
+  .colorModeContainer::before {
+    height: 200px;
+    width: 200px;
+    padding: 8px;
+  }
+
+  .colorModeContainer::before {
+    filter: blur(1.5rem);
+  }
+
+  .colorMode {
+    right: 60px;
+    top: 3px;
+  }
+
+  h2::after {
+    max-width: 220px;
+  }
+}
+
+@media (min-width: 360px) {
+  .container {
+    margin-top: 20px;
+  }
+  .hero {
+    max-width: 200px;
+    width: 200px;
+  }
+
+  .colorModeContainer::after,
+  .colorModeContainer::before {
+    height: 200px;
+    width: 200px;
+    padding: 8px;
+  }
+
+  .colorModeContainer::before {
+    filter: blur(1.5rem);
+  }
+
+  .colorMode {
+    right: 65px;
+    top: 3px;
+  }
+
+  h2::after {
+    max-width: 220px;
+  }
+}
+
+@media (min-width: 375px) {
+  .container {
+    margin-top: 20px;
+  }
+  .hero {
+    max-width: 200px;
+    width: 200px;
+  }
+
+  .colorModeContainer::after,
+  .colorModeContainer::before {
+    height: 200px;
+    width: 200px;
+    padding: 8px;
+  }
+
+  .colorModeContainer::before {
+    filter: blur(1.5rem);
+  }
+
+  .colorMode {
+    right: 75px;
+    top: 3px;
+  }
+
+  h2::after {
+    max-width: 220px;
+  }
+}
+
+@media (min-width: 410px) {
+  .container {
+    margin-top: 20px;
+  }
+  .hero {
+    max-width: 200px;
+    width: 200px;
+  }
+
+  .colorModeContainer::after,
+  .colorModeContainer::before {
+    height: 200px;
+    width: 200px;
+    padding: 8px;
+  }
+
+  .colorModeContainer::before {
+    filter: blur(1.5rem);
+  }
+
+  .colorMode {
+    right: 85px;
+    top: 3px;
+  }
+
+  h2::after {
+    max-width: 220px;
+  }
+}
+
+@media (min-width: 500px) {
+  .container {
+    flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
 
@@ -297,6 +431,10 @@ h2:hover::after {
       max-width: 350px;
       width: 350px;
     }
+  }
+
+  .colorMode {
+    right: 15px;
   }
 
   .colorModeContainer::after,
@@ -315,7 +453,39 @@ h2:hover::after {
   }
 }
 
-@media (width >= 1400px) {
+@media (min-width: 800px) {
+  .container {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .hero {
+      max-width: 350px;
+      width: 350px;
+    }
+  }
+
+  .colorMode {
+    right: -25px;
+  }
+
+  .colorModeContainer::after,
+  .colorModeContainer::before {
+    height: 350px;
+    width: 350px;
+    padding: 12px;
+  }
+
+  .colorModeContainer::before {
+    filter: blur(1.5rem);
+  }
+
+  h2::after {
+    max-width: 265px;
+  }
+}
+
+@media (min-width: 1400px) {
   .container {
     .hero {
       max-width: 400px;
@@ -325,6 +495,10 @@ h2:hover::after {
     .description {
       font-size: 21px;
     }
+  }
+
+  .colorMode {
+    right: -25px;
   }
 
   .colorModeContainer::after,
@@ -340,5 +514,18 @@ h2:hover::after {
 
   h2::after {
     max-width: 266px;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 750px) {
+  .container {
+    margin-bottom: 180px;
+    padding-bottom: 350px; /* Add padding-top to the container to create space */
+  }
+}
+
+@media (min-width: 540px) and (max-height: 720px) {
+  .container {
+    padding-bottom: 150px;
   }
 }
