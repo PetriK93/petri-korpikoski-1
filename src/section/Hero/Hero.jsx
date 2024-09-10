@@ -20,7 +20,7 @@ function Hero({ language, toggleLanguage }) {
   const twitterIcon = theme === "light" ? twitterLight : twitterDark;
   const githubIcon = theme === "light" ? githubLight : githubDark;
   const linkedinIcon = theme === "light" ? linkedinLight : linkedinDark;
-  const langIcon = language === "en" ? finIcon : enIcon;
+  const langIcon = language === "en" ? enIcon : finIcon;
 
   return (
     <section id="hero" className={styles.container}>
@@ -43,7 +43,7 @@ function Hero({ language, toggleLanguage }) {
             alt="Language switch"
             onClick={toggleLanguage}
           />
-          <p className={styles.bold}>{language === "en" ? "Fi" : "En"}</p>
+          <p className={styles.bold}>{language === "en" ? "En" : "Fi"}</p>
         </div>
       </div>
       <div className={styles.info}>

@@ -19,6 +19,7 @@
 }
 
 body {
+  background-color: #222;
   background-color: var(--background-color);
   display: flex;
   justify-content: center;
