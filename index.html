@@ -8,8 +8,8 @@
     </style>
     <script>
       (function () {
-        const savedTheme = localStorage.getItem("theme") || "dark";
-        document.documentElement.setAttribute("data-theme", savedTheme);
+        const savedTheme = localStorage.getItem("theme") || "dark"; // Assuming "dark" is default
+        document.body.setAttribute("data-theme", savedTheme);
       })();
     </script>
     <meta charset="UTF-8" />
