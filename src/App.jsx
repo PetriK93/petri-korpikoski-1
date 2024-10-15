@@ -6,27 +6,49 @@ import Skills from "./section/Skills/Skills";
 import Contact from "./section/Contact/Contact";
 import Footer from "./section/Footer/Footer";
 import Preloader from "./section/Preloader/Preloader";
+import heroImg from "./assets/Portfolio logo.png";
 
 function App() {
   const [loading, setLoading] = useState(true);
   const [language, setLanguage] = useState("en");
-
-  const toggleLanguage = () => {
-    setLanguage((prevLanguage) => (prevLanguage === "en" ? "fi" : "en"));
-  };
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-
-    return () => clearTimeout(timer);
+    const savedLanguage = localStorage.getItem("language") || "en";
+    setLanguage(savedLanguage);
   }, []);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = heroImg;
+
+    // When the image has fully loaded, update the state
+    img.onload = () => {
+      setIsImageLoaded(true);
+    };
+  }, []);
+
+  // Conditional rendering based on whether the image is loaded
+  if (!isImageLoaded) {
+    return null; // You can also return a loading spinner here if you want
+  }
+
+  const toggleLanguage = () => {
+    setLanguage((prevLanguage) => {
+      const newLanguage = prevLanguage === "en" ? "fi" : "en";
+      localStorage.setItem("language", newLanguage);
+      return newLanguage;
+    });
+  };
+
+  const handlePreloaderComplete = () => {
+    setLoading(false);
+  };
 
   return (
     <>
       {loading ? (
-        <Preloader />
+        <Preloader onComplete={handlePreloaderComplete} />
       ) : (
         <>
           <Hero language={language} toggleLanguage={toggleLanguage} />

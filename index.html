@@ -7,10 +7,10 @@
       }
     </style>
     <script>
-      (function () {
+      document.addEventListener("DOMContentLoaded", function () {
         const savedTheme = localStorage.getItem("theme") || "dark";
         document.body.setAttribute("data-theme", savedTheme);
-      })();
+      });
     </script>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/favicon.png" />

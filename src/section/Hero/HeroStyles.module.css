@@ -39,6 +39,7 @@
         width: 30px;
         height: 30px;
         aspect-ratio: 1 / 1;
+        z-index: 99;
       }
     }
   }

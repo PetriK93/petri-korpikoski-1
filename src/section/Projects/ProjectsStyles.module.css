@@ -13,6 +13,10 @@
     aspect-ratio: 1 / 1;
   }
 
+  h1 {
+    margin-top: 50px;
+  }
+
   h3 {
     margin-top: 2px;
   }
@@ -42,5 +46,8 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 0 30px;
+  }
+  .projectsContainer h1 {
+    margin-top: 0;
   }
 }

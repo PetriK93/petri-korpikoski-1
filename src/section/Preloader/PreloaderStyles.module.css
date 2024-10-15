@@ -7,6 +7,15 @@
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -18,12 +27,12 @@
   left: 0;
   z-index: 100;
   background-color: transparent;
+  animation: fadeOut 0.5s ease-out forwards;
+  animation-delay: 1.5s;
 }
 
 .preloaderImage {
-  width: 350px;
-  max-width: 350px;
+  width: 250px;
+  max-width: 250px;
   height: auto;
-  animation: fadeOut 0.5s ease-out forwards;
-  animation-delay: 1.5s;
 }

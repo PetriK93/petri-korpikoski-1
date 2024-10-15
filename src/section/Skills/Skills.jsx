@@ -18,6 +18,7 @@ import obsLight from "../../assets/obsIconLight.png";
 import obsDark from "../../assets/obsIconDark.png";
 import videocameraIcon from "../../assets/videocameraIcon.png";
 import contentCreationIcon from "../../assets/contentCreationIcon.png";
+import mySQLIcon from "./../../assets/mySQLIcon.png";
 
 import SkillList from "../../common/SkillList";
 import { useTheme } from "../../common/ThemeContext";
@@ -34,16 +35,21 @@ function Skills({ language, toggleLanguage }) {
       <h1 className="sectionTitle">
         {language === "en" ? "Tech stack" : "Teknologiat"}
       </h1>
-      <div className={styles.skillList}>
-        <SkillList src={htmlIcon} skill="HTML" />
-        <SkillList src={cssIcon} skill="CSS" />
-        <SkillList src={javascriptIcon} skill="Javascript" />
-        <SkillList src={reacttIcon} skill="React" />
-        <SkillList src={nodejsIcon} skill="Node.js" />
-        <SkillList src={pythonIcon} skill="Python" />
-        <SkillList src={viteIcon} skill="Vite" />
-        <SkillList src={gitIcon} skill="Git" />
-        <SkillList src={gitHubIcon} skill="Github" />
+      <div className={styles.rowWrapper}>
+        <div className={styles.skillList}>
+          <SkillList src={htmlIcon} skill="HTML" />
+          <SkillList src={cssIcon} skill="CSS" />
+          <SkillList src={javascriptIcon} skill="Javascript" />
+          <SkillList src={reacttIcon} skill="React" />
+          <SkillList src={nodejsIcon} skill="Node.js" />
+        </div>
+        <div className={styles.skillList}>
+          <SkillList src={mySQLIcon} skill="MySQL" />
+          <SkillList src={pythonIcon} skill="Python" />
+          <SkillList src={viteIcon} skill="Vite" />
+          <SkillList src={gitIcon} skill="Git" />
+          <SkillList src={gitHubIcon} skill="Github" />
+        </div>
       </div>
       <hr />
       <h1 className="sectionTitle">

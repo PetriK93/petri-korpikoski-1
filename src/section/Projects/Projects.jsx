@@ -1,5 +1,5 @@
 import styles from "./ProjectsStyles.module.css";
-import viberr from "../../assets/viberr.png";
+import moonveilMarket from "../../assets/moonveil_market.jpg";
 import ProjectCard from "../../common/ProjectCard";
 import freshBurger from "../../assets/fresh-burger.png";
 import hipsster from "../../assets/hipsster.png";
@@ -13,10 +13,14 @@ function Projects({ language, toggleLanguage }) {
       </h1>
       <div className={styles.projectsContainer}>
         <ProjectCard
-          src={viberr}
-          link="https://github.com/PetriK93?tab=repositories"
-          h3="Viberr"
-          p={language === "en" ? "Streaming App" : "Streamaus Äppi"}
+          src={moonveilMarket}
+          link="https://github.com/PetriK93/Moonveil-Market"
+          h3="Moonveil Market"
+          p={
+            language === "en"
+              ? "Fantasy RPG Marketplace"
+              : "Fantasia RPG Markkinatori"
+          }
         />
         <ProjectCard
           src={freshBurger}
