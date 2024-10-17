@@ -25,7 +25,7 @@ function Projects({ language, toggleLanguage }) {
         <ProjectCard
           src={freshBurger}
           link="https://github.com/PetriK93?tab=repositories"
-          h3="Fresh Burger"
+          h3="Fresh Burger (PLACEHOLDER)"
           p={
             language === "en" ? "Hamburger Restaurant" : "Hampurilaisravintola"
           }
@@ -33,13 +33,13 @@ function Projects({ language, toggleLanguage }) {
         <ProjectCard
           src={hipsster}
           link="https://github.com/PetriK93?tab=repositories"
-          h3="Hipsster"
+          h3="Hipsster (PLACEHOLDER)"
           p={language === "en" ? "Optical Store" : "Optikkoliike"}
         />
         <ProjectCard
           src={fitLift}
           link="https://github.com/PetriK93?tab=repositories"
-          h3="FitLift"
+          h3="FitLift (PLACEHOLDER)"
           p={language === "en" ? "Fitness App" : "Fitness Äppi"}
         />
       </div>

@@ -7,6 +7,7 @@ import Contact from "./section/Contact/Contact";
 import Footer from "./section/Footer/Footer";
 import Preloader from "./section/Preloader/Preloader";
 import heroImg from "./assets/Portfolio logo.png";
+import Certifications from "./section/Certifications/Certifications";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -53,6 +54,7 @@ function App() {
         <>
           <Hero language={language} toggleLanguage={toggleLanguage} />
           <Projects language={language} toggleLanguage={toggleLanguage} />
+          <Certifications language={language} toggleLanguage={toggleLanguage} />
           <Skills language={language} toggleLanguage={toggleLanguage} />
           <Contact language={language} toggleLanguage={toggleLanguage} />
           <Footer language={language} toggleLanguage={toggleLanguage} />

@@ -1,0 +1,89 @@
+.certificationsContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  img {
+    width: 40px;
+    height: 40px;
+    aspect-ratio: 1 / 1;
+  }
+}
+
+.skillList {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.certificationsContainer .rowWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-self: center;
+}
+
+.certificationsContainer hr {
+  width: 120px;
+  height: 1px;
+  border: none;
+  background-color: var(--text-color);
+  margin: 30px auto 0;
+}
+
+@media (width >= 800px) {
+  .skillList {
+    max-width: fit-content;
+    gap: 30px;
+    max-width: 75ch;
+
+    p {
+      font-size: 20px;
+    }
+  }
+
+  .certificationsContainer hr {
+    width: 300px;
+    margin-bottom: -30px;
+  }
+}
+
+@media (width >= 1400px) {
+  .skillList {
+    max-width: fit-content;
+    gap: 32px;
+    max-width: 85ch;
+
+    p {
+      font-size: 21px;
+    }
+  }
+
+  .certificationsContainer hr {
+    width: 300px;
+    margin-bottom: -140px;
+  }
+}
+
+.break {
+  flex-basis: 100%;
+}
+
+.certificationsContainer .skillLink {
+  text-decoration: none;
+  display: inline-block;
+  color: inherit;
+}
+
+.certificationsContainer a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}

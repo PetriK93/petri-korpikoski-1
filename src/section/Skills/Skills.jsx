@@ -62,48 +62,48 @@ function Skills({ language, toggleLanguage }) {
           src={vegasIcon}
           skill={
             language === "en"
-              ? "Vegas Pro (Video production)."
-              : "Vegas Pro (Videoeditointi)."
+              ? "Vegas Pro (Video production)"
+              : "Vegas Pro (Videoeditointi)"
           }
         />
         <SkillList
           src={photoshopIcon}
           skill={
             language === "en"
-              ? "Photoshop (Photo editing)."
-              : "Photoshop (Kuvan muokkaus)."
+              ? "Photoshop (Photo editing)"
+              : "Photoshop (Kuvan muokkaus)"
           }
         />
         <SkillList
           src={reaperIcon}
           skill={
             language === "en"
-              ? "Reaper DAW (Audio production)."
-              : "Reaper DAW (Äänituotanto)."
+              ? "Reaper DAW (Audio production)"
+              : "Reaper DAW (Äänituotanto)"
           }
         />
         <SkillList
           src={obsIcon}
           skill={
             language === "en"
-              ? "OBS Studio (Video capture)."
-              : "OBS Studio (Videotallennus)."
+              ? "OBS Studio (Video capture)"
+              : "OBS Studio (Videotallennus)"
           }
         />
         <SkillList
           src={videocameraIcon}
           skill={
             language === "en"
-              ? "Proficient with mics and video cameras."
-              : "Kokemusta mikkien ja videokameroiden käytöstä."
+              ? "Proficient with mics and video cameras"
+              : "Kokemusta mikkien ja videokameroiden käytöstä"
           }
         />
         <SkillList
           src={contentCreationIcon}
           skill={
             language === "en"
-              ? "Content creation (Social media)."
-              : "Sisällöntuotanto (Sosiaalimedia)."
+              ? "Content creation (Social media)"
+              : "Sisällöntuotanto (Sosiaalimedia)"
           }
         />
       </div>
