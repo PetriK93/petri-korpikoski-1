@@ -10,7 +10,7 @@ import githubLight from "../../assets/github-light.svg";
 import githubDark from "../../assets/github-dark.svg";
 import linkedinLight from "../../assets/linkedin-light.svg";
 import linkedinDark from "../../assets/linkedin-dark.svg";
-import CV from "../../assets/cv.pdf";
+import CV from "../../assets/Petri_Korpikoski_CV.pdf";
 import { useTheme } from "../../common/ThemeContext";
 
 function Hero({ language, toggleLanguage }) {
@@ -62,7 +62,11 @@ function Hero({ language, toggleLanguage }) {
           <a type="github" href="https://github.com/PetriK93" target="_blank">
             <img src={githubIcon} alt="Github icon" />
           </a>
-          <a type="linkedin" href="https://linkedin.com/" target="_blank">
+          <a
+            type="linkedin"
+            href="https://linkedin.com/in/petri-korpikoski-5b6231334"
+            target="_blank"
+          >
             <img src={linkedinIcon} alt="Linkedin icon" />
           </a>
         </span>
