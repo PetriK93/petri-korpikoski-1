@@ -1,6 +1,6 @@
 import styles from "./FooterStyles.module.css";
 
-function Footer({ language, toggleLanguage }) {
+function Footer({ language }) {
   return (
     <section id="footer" className={styles.container}>
       <p>

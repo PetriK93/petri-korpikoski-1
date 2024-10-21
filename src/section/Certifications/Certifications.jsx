@@ -5,7 +5,7 @@ import SkillList from "../../common/SkillList";
 function Certifications({ language }) {
   return (
     <section id="certifications" className={styles.certificationsContainer}>
-      <h1 className="sectionTitle">
+      <h1 id="certifications" className="sectionTitle">
         {language === "en" ? "Certifications" : "Sertifikaatiot"}
       </h1>
       <div className={styles.rowWrapper}>

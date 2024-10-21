@@ -5,10 +5,10 @@ import freshBurger from "../../assets/fresh-burger.png";
 import hipsster from "../../assets/hipsster.png";
 import fitLift from "../../assets/fitlift.png";
 
-function Projects({ language, toggleLanguage }) {
+function Projects({ language }) {
   return (
     <section id="projects" className={styles.container}>
-      <h1 className="sectionTitle">
+      <h1 id="projects" className="sectionTitle">
         {language === "en" ? "Projects" : "Projektit"}
       </h1>
       <div className={styles.projectsContainer}>

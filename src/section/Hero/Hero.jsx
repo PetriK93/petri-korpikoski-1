@@ -47,7 +47,7 @@ function Hero({ language, toggleLanguage }) {
         </div>
       </div>
       <div className={styles.info}>
-        <h1>
+        <h1 id="about">
           Petri
           <br />
           Korpikoski

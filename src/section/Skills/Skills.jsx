@@ -23,7 +23,7 @@ import mySQLIcon from "./../../assets/mySQLIcon.png";
 import SkillList from "../../common/SkillList";
 import { useTheme } from "../../common/ThemeContext";
 
-function Skills({ language, toggleLanguage }) {
+function Skills({ language }) {
   const { theme } = useTheme();
   const checkMarkIcon =
     theme === "light" ? checkMarkIconLight : checkMarkIconDark;
@@ -32,7 +32,7 @@ function Skills({ language, toggleLanguage }) {
 
   return (
     <section id="skills" className={styles.container}>
-      <h1 className="sectionTitle">
+      <h1 id="skills" className="sectionTitle">
         {language === "en" ? "Tech stack" : "Teknologiat"}
       </h1>
       <div className={styles.rowWrapper}>

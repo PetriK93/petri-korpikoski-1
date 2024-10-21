@@ -1,0 +1,124 @@
+.navBar {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  z-index: 99;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 80px;
+  background-color: var(--navBar-color);
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: -1px;
+}
+
+.navigation {
+  background-color: transparent;
+  margin-right: 100px;
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+.navigationItem {
+  background-color: transparent;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  user-select: none;
+}
+
+.navigation a {
+  background-color: transparent;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  user-select: none;
+}
+
+.navigation :hover {
+  color: var(--button-gradient-color);
+}
+
+.dropdown {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.dropdownButton {
+  display: none;
+  background: transparent;
+  color: transparent;
+  border: none;
+}
+
+.dropdownMenu {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: -15%;
+  background-color: var(--navBar-color);
+  padding: 10px 0;
+  margin: 0;
+  min-width: 150px;
+  z-index: 999;
+  border-top: 0;
+  border-radius: 0 0 20px 0;
+}
+
+.dropdownMenu li {
+  padding: 10px 20px;
+  width: 100%;
+  text-align: left;
+}
+
+.dropdownMenu a {
+  background-color: transparent;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  padding: 8px 0;
+  transition: color 0.2s ease;
+  user-select: none;
+}
+
+.dropdown a:hover {
+  color: var(--button-gradient-color);
+}
+
+@media (max-width: 915px) {
+  .navBar {
+    justify-content: flex-start;
+    padding-left: 8px;
+  }
+
+  .dropdownButton {
+    display: flex;
+    justify-content: center;
+  }
+
+  .navigation {
+    display: none;
+  }
+}
+
+@media (min-width: 916px) {
+  .dropdownMenu {
+    display: none;
+  }
+}

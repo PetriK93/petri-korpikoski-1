@@ -8,6 +8,7 @@ import Footer from "./section/Footer/Footer";
 import Preloader from "./section/Preloader/Preloader";
 import heroImg from "./assets/Portfolio logo.png";
 import Certifications from "./section/Certifications/Certifications";
+import NavBar from "./section/NavBar/NavBar";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -52,6 +53,7 @@ function App() {
         <Preloader onComplete={handlePreloaderComplete} />
       ) : (
         <>
+          <NavBar language={language} toggleLanguage={toggleLanguage} />
           <Hero language={language} toggleLanguage={toggleLanguage} />
           <Projects language={language} toggleLanguage={toggleLanguage} />
           <Certifications language={language} toggleLanguage={toggleLanguage} />

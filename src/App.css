@@ -6,6 +6,11 @@
   --text-color: #222;
   --form-text-color: #555;
   --footer-text-color: #888;
+  --navBar-color: rgb(201, 201, 201);
+  --button-color-gradient-light: var(--btn-color);
+  --button-color-gradient-dark: red;
+  --button-gradient-color: var(--button-color-gradient-light);
+  --text-color-swap: #222;
 }
 
 [data-theme="dark"] {
@@ -16,15 +21,22 @@
   --text-color: #fff;
   --form-text-color: #fff;
   --footer-text-color: #bbb;
+  --navBar-color: rgb(65, 63, 63);
+  --button-gradient-color: var(--button-color-gradient-dark);
+  --text-color-swap: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: #222;
   background-color: var(--background-color);
-  display: flex;
-  justify-content: center;
-  margin: 0 auto 60px;
+  margin: 0 0 60px;
+  padding: 0;
   scroll-snap-type: none;
+  scroll-padding-top: 80px;
 }
 
 #root {
@@ -44,7 +56,8 @@ p {
 
 h2,
 h3,
-p {
+p,
+nav {
   font-family: "Roboto Mono", monospace;
 }
 
