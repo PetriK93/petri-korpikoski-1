@@ -61,7 +61,18 @@ button[type="submit"]:active {
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
 }
 
+<<<<<<< Updated upstream
 @media (width >= 800px) {
+=======
+.sectionTitle {
+  position: relative;
+  margin-bottom: 60px;
+  padding-bottom: 10px;
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.6);
+}
+
+@media (min-width: 800px) {
+>>>>>>> Stashed changes
   textarea,
   input:not([type="submit"]) {
     width: 600px;

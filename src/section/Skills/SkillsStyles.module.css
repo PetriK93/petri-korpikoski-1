@@ -58,38 +58,9 @@ hr {
   margin: 30px auto 50px;
 }
 
-@media (width >= 800px) {
-  .skillList {
-    max-width: fit-content;
-    gap: 30px;
-    max-width: 75ch;
-
-    p {
-      font-size: 20px;
-    }
-  }
-
-  hr {
-    width: 300px;
-  }
-}
-
-@media (width >= 1400px) {
-  .skillList {
-    max-width: fit-content;
-    gap: 32px;
-    max-width: 85ch;
-
-    p {
-      font-size: 21px;
-    }
-  }
-
-  hr {
-    width: 300px;
-  }
-}
-
-.break {
-  flex-basis: 100%;
+.sectionTitle {
+  position: relative;
+  margin-bottom: 60px;
+  padding-bottom: 10px;
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.6);
 }

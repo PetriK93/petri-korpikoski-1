@@ -5,7 +5,11 @@ import SkillList from "../../common/SkillList";
 function Certifications({ language }) {
   return (
     <section id="certifications" className={styles.certificationsContainer}>
+<<<<<<< Updated upstream
       <h1 id="certifications" className="sectionTitle">
+=======
+      <h1 id="certifications" className={styles.sectionTitle}>
+>>>>>>> Stashed changes
         {language === "en" ? "Certifications" : "Sertifikaatiot"}
       </h1>
       <div className={styles.rowWrapper}>

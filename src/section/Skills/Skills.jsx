@@ -32,7 +32,11 @@ function Skills({ language }) {
 
   return (
     <section id="skills" className={styles.container}>
+<<<<<<< Updated upstream
       <h1 id="skills" className="sectionTitle">
+=======
+      <h1 id="skills" className={styles.sectionTitle}>
+>>>>>>> Stashed changes
         {language === "en" ? "Tech stack" : "Teknologiat"}
       </h1>
       <div className={styles.rowWrapper}>
@@ -52,7 +56,11 @@ function Skills({ language }) {
         </div>
       </div>
       <hr />
+<<<<<<< Updated upstream
       <h1 className="sectionTitle">
+=======
+      <h1 className={styles.sectionTitle}>
+>>>>>>> Stashed changes
         {language === "en"
           ? "Other useful tech skills"
           : "Muita hyödyllisiä teknisiä taitoja"}
@@ -108,7 +116,11 @@ function Skills({ language }) {
         />
       </div>
       <hr />
+<<<<<<< Updated upstream
       <h1 className="sectionTitle">
+=======
+      <h1 className={styles.sectionTitle}>
+>>>>>>> Stashed changes
         {language === "en"
           ? "Soft & general skills"
           : "Pehmeät & yleiset taidot"}
