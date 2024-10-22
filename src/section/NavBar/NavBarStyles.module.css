@@ -84,6 +84,7 @@
   padding: 10px 20px;
   width: 100%;
   text-align: left;
+  outline: none;
 }
 
 .dropdownMenu a {
@@ -97,6 +98,7 @@
   transition: color 0.2s ease;
   user-select: none;
   cursor: pointer;
+  outline: none;
 }
 
 .dropdown a:hover {

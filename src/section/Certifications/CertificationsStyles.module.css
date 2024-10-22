@@ -23,6 +23,10 @@
   align-items: center;
 }
 
+.skillList a {
+  text-decoration: none;
+}
+
 .certificationsContainer .rowWrapper {
   display: flex;
   flex-direction: row;
@@ -72,27 +76,9 @@
   }
 }
 
-<<<<<<< Updated upstream
-.break {
-  flex-basis: 100%;
-}
-
-.certificationsContainer .skillLink {
-  text-decoration: none;
-  display: inline-block;
-  color: inherit;
-}
-
-.certificationsContainer a {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-}
-=======
 .sectionTitle {
   position: relative;
   margin-bottom: 60px;
   padding-bottom: 10px;
   text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.6);
 }
->>>>>>> Stashed changes
