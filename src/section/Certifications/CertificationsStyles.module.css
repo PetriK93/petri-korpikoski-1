@@ -72,14 +72,9 @@
   }
 }
 
-.sectionTitle {
-  position: relative;
-  margin-bottom: 60px;
-  padding-bottom: 10px;
-  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.6);
-  opacity: 0;
-  transform: translateX(100%);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+<<<<<<< Updated upstream
+.break {
+  flex-basis: 100%;
 }
 
 .certificationsContainer .skillLink {
@@ -88,22 +83,16 @@
   color: inherit;
 }
 
-/*.sectionTitle::after {
-  content: "";
-  position: absolute;
-  left: 808px;
-  bottom: 12px;
-  height: 18px;
-  width: 352px;
-  background-color: var(--button-gradient-color);
-  opacity: 0;
-  transform: translateX(100%);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-  z-index: -1;
+.certificationsContainer a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
 }
-
-.sectionTitle.animate::after {
-  opacity: 1;
-  transform: translateX(0);
+=======
+.sectionTitle {
+  position: relative;
+  margin-bottom: 60px;
+  padding-bottom: 10px;
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.6);
 }
-*/
+>>>>>>> Stashed changes
