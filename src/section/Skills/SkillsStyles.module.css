@@ -58,38 +58,105 @@ hr {
   margin: 30px auto 50px;
 }
 
-@media (width >= 800px) {
-  .skillList {
-    max-width: fit-content;
-    gap: 30px;
-    max-width: 75ch;
-
-    p {
-      font-size: 20px;
-    }
-  }
-
-  hr {
-    width: 300px;
-  }
+.sectionTitle1 {
+  position: relative;
+  margin-bottom: 60px;
+  padding-bottom: 10px;
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
-@media (width >= 1400px) {
-  .skillList {
-    max-width: fit-content;
-    gap: 32px;
-    max-width: 85ch;
-
-    p {
-      font-size: 21px;
-    }
-  }
-
-  hr {
-    width: 300px;
-  }
+.sectionTitle1.animate {
+  opacity: 1;
+  transform: translateX(0);
 }
 
-.break {
-  flex-basis: 100%;
+/*.sectionTitle1::after {
+  content: "";
+  position: absolute;
+  left: 842px;
+  bottom: 12px;
+  height: 18px;
+  width: 280px;
+  background-color: var(--button-gradient-color);
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  z-index: -1;
 }
+
+.sectionTitle1.animate::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+*/
+.sectionTitle2 {
+  position: relative;
+  margin-bottom: 60px;
+  padding-bottom: 10px;
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.sectionTitle2.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/*.sectionTitle2::after {
+  content: "";
+  position: absolute;
+  left: 698px;
+  bottom: 12px;
+  height: 18px;
+  width: 581px;
+  background-color: var(--button-gradient-color);
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  z-index: -1;
+}
+
+.sectionTitle2.animate::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+*/
+.sectionTitle3 {
+  position: relative;
+  margin-bottom: 60px;
+  padding-bottom: 10px;
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.sectionTitle3.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/*.sectionTitle3::after {
+  content: "";
+  position: absolute;
+  left: 733px;
+  bottom: 12px;
+  height: 18px;
+  width: 505px;
+  background-color: var(--button-gradient-color);
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  z-index: -1;
+}
+
+.sectionTitle3.animate::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+*/

@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import styles from "./SkillsStyles.module.css";
 import checkMarkIconLight from "../../assets/checkmark-light.svg";
 import checkMarkIconDark from "../../assets/checkmark-dark.svg";
@@ -24,6 +25,42 @@ import SkillList from "../../common/SkillList";
 import { useTheme } from "../../common/ThemeContext";
 
 function Skills({ language }) {
+  const titleRef1 = useRef(null);
+  const titleRef2 = useRef(null);
+  const titleRef3 = useRef(null);
+
+  useEffect(() => {
+    const titleElements = [
+      titleRef1.current,
+      titleRef2.current,
+      titleRef3.current,
+    ];
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add(styles.animate); // Add animation class
+        }
+      });
+    });
+
+    // Observe each title element
+    titleElements.forEach((element) => {
+      if (element) {
+        observer.observe(element);
+      }
+    });
+
+    return () => {
+      // Unobserve each title element
+      titleElements.forEach((element) => {
+        if (element) {
+          observer.unobserve(element);
+        }
+      });
+    };
+  }, []);
+
   const { theme } = useTheme();
   const checkMarkIcon =
     theme === "light" ? checkMarkIconLight : checkMarkIconDark;
@@ -32,7 +69,7 @@ function Skills({ language }) {
 
   return (
     <section id="skills" className={styles.container}>
-      <h1 id="skills" className="sectionTitle">
+      <h1 ref={titleRef1} id="skills" className={styles.sectionTitle1}>
         {language === "en" ? "Tech stack" : "Teknologiat"}
       </h1>
       <div className={styles.rowWrapper}>
@@ -52,7 +89,7 @@ function Skills({ language }) {
         </div>
       </div>
       <hr />
-      <h1 className="sectionTitle">
+      <h1 ref={titleRef2} className={styles.sectionTitle2}>
         {language === "en"
           ? "Other useful tech skills"
           : "Muita hyödyllisiä teknisiä taitoja"}
@@ -108,7 +145,7 @@ function Skills({ language }) {
         />
       </div>
       <hr />
-      <h1 className="sectionTitle">
+      <h1 ref={titleRef3} className={styles.sectionTitle3}>
         {language === "en"
           ? "Soft & general skills"
           : "Pehmeät & yleiset taidot"}

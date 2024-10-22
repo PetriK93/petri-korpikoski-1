@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   position: fixed;
-  z-index: 99;
+  z-index: 999;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -17,7 +17,7 @@
 
 .navigation {
   background-color: transparent;
-  margin-right: 100px;
+  margin-right: 120px;
   display: flex;
   gap: 40px;
   list-style: none;
@@ -61,6 +61,7 @@
   background: transparent;
   color: transparent;
   border: none;
+  cursor: pointer;
 }
 
 .dropdownMenu {
@@ -74,7 +75,7 @@
   padding: 10px 0;
   margin: 0;
   min-width: 150px;
-  z-index: 999;
+  z-index: 998;
   border-top: 0;
   border-radius: 0 0 20px 0;
 }
@@ -95,6 +96,7 @@
   padding: 8px 0;
   transition: color 0.2s ease;
   user-select: none;
+  cursor: pointer;
 }
 
 .dropdown a:hover {

@@ -1,11 +1,35 @@
+import { useEffect, useRef } from "react";
 import styles from "./CertificationsStyles.module.css";
 import certificationIcon from "../../assets/certificationIcon.png";
 import SkillList from "../../common/SkillList";
 
 function Certifications({ language }) {
+  const titleRef = useRef(null);
+
+  useEffect(() => {
+    const titleElement = titleRef.current;
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          titleElement.classList.add(styles.animate); // Add 'animate' class when title is visible
+        }
+      });
+    });
+
+    if (titleElement) {
+      observer.observe(titleElement); // Observe the title element
+    }
+
+    return () => {
+      if (titleElement) {
+        observer.unobserve(titleElement); // Cleanup observer on unmount
+      }
+    };
+  }, []);
+
   return (
     <section id="certifications" className={styles.certificationsContainer}>
-      <h1 id="certifications" className="sectionTitle">
+      <h1 ref={titleRef} id="certifications" className={styles.sectionTitle}>
         {language === "en" ? "Certifications" : "Sertifikaatiot"}
       </h1>
       <div className={styles.rowWrapper}>
