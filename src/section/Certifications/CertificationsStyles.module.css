@@ -38,23 +38,7 @@
   margin: 30px auto 0;
 }
 
-.break {
-  flex-basis: 100%;
-}
-
-.certificationsContainer .skillLink {
-  text-decoration: none;
-  display: inline-block;
-  color: inherit;
-}
-
-.certificationsContainer a {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-}
-
-@media (min-width: 800px) {
+@media (width >= 800px) {
   .skillList {
     max-width: fit-content;
     gap: 30px;
@@ -88,11 +72,6 @@
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-.break {
-  flex-basis: 100%;
-=======
 .sectionTitle {
   position: relative;
   margin-bottom: 60px;
@@ -101,12 +80,12 @@
   opacity: 0;
   transform: translateX(100%);
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
->>>>>>> 2080fcca580447a69d1136eac23c9806bee2e18c
 }
 
-.sectionTitle.animate {
-  opacity: 1;
-  transform: translateX(0);
+.certificationsContainer .skillLink {
+  text-decoration: none;
+  display: inline-block;
+  color: inherit;
 }
 
 /*.sectionTitle::after {
@@ -122,20 +101,9 @@
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
   z-index: -1;
 }
-<<<<<<< HEAD
-=======
-.sectionTitle {
-  position: relative;
-  margin-bottom: 60px;
-  padding-bottom: 10px;
-  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.6);
-}
->>>>>>> Stashed changes
-=======
 
 .sectionTitle.animate::after {
   opacity: 1;
   transform: translateX(0);
 }
 */
->>>>>>> 2080fcca580447a69d1136eac23c9806bee2e18c
