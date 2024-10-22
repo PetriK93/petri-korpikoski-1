@@ -8,11 +8,7 @@ import fitLift from "../../assets/fitlift.png";
 function Projects({ language }) {
   return (
     <section id="projects" className={styles.container}>
-<<<<<<< Updated upstream
-      <h1 id="projects" className="sectionTitle">
-=======
-      <h1 className={styles.sectionTitle}>
->>>>>>> Stashed changes
+      <h1 id="projects" className={styles.sectionTitle}>
         {language === "en" ? "Projects" : "Projektit"}
       </h1>
       <div className={styles.projectsContainer}>

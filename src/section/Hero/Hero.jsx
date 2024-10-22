@@ -47,11 +47,7 @@ function Hero({ language, toggleLanguage }) {
         </div>
       </div>
       <div className={styles.info}>
-<<<<<<< Updated upstream
-        <h1 id="about">
-=======
         <h1 id="about" className={styles.nameTitle}>
->>>>>>> Stashed changes
           Petri
           <br />
           Korpikoski

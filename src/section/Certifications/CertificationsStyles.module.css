@@ -38,7 +38,23 @@
   margin: 30px auto 0;
 }
 
-@media (width >= 800px) {
+.break {
+  flex-basis: 100%;
+}
+
+.certificationsContainer .skillLink {
+  text-decoration: none;
+  display: inline-block;
+  color: inherit;
+}
+
+.certificationsContainer a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+@media (min-width: 800px) {
   .skillList {
     max-width: fit-content;
     gap: 30px;
@@ -72,22 +88,41 @@
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 .break {
   flex-basis: 100%;
+=======
+.sectionTitle {
+  position: relative;
+  margin-bottom: 60px;
+  padding-bottom: 10px;
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+>>>>>>> 2080fcca580447a69d1136eac23c9806bee2e18c
 }
 
-.certificationsContainer .skillLink {
-  text-decoration: none;
-  display: inline-block;
-  color: inherit;
+.sectionTitle.animate {
+  opacity: 1;
+  transform: translateX(0);
 }
 
-.certificationsContainer a {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
+/*.sectionTitle::after {
+  content: "";
+  position: absolute;
+  left: 808px;
+  bottom: 12px;
+  height: 18px;
+  width: 352px;
+  background-color: var(--button-gradient-color);
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  z-index: -1;
 }
+<<<<<<< HEAD
 =======
 .sectionTitle {
   position: relative;
@@ -96,3 +131,11 @@
   text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.6);
 }
 >>>>>>> Stashed changes
+=======
+
+.sectionTitle.animate::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+*/
+>>>>>>> 2080fcca580447a69d1136eac23c9806bee2e18c
