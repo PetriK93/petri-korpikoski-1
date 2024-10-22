@@ -1,9 +1,33 @@
+import { useEffect, useRef } from "react";
 import styles from "./ContactStyles.module.css";
 
 function Contact({ language }) {
+  const titleRef = useRef(null);
+
+  useEffect(() => {
+    const titleElement = titleRef.current;
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          titleElement.classList.add(styles.animate);
+        }
+      });
+    });
+
+    if (titleElement) {
+      observer.observe(titleElement);
+    }
+
+    return () => {
+      if (titleElement) {
+        observer.unobserve(titleElement);
+      }
+    };
+  }, []);
+
   return (
     <section id="contact" className={styles.container}>
-      <h1 id="contact" className="sectionTitle">
+      <h1 ref={titleRef} id="contact" className={styles.sectionTitle}>
         {language === "en" ? "Contact" : "Ota yhteyttä"}
       </h1>
       <form action="https://formspree.io/f/mpwanrek" method="POST">
