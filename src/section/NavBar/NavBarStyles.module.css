@@ -13,11 +13,13 @@
   align-items: center;
   justify-content: flex-end;
   margin-top: -1px;
+  will-change: opacity;
 }
 
 .navigation {
+  position: absolute;
   background-color: transparent;
-  margin-right: 120px;
+  margin-right: 90px;
   display: flex;
   gap: 40px;
   list-style: none;
@@ -48,7 +50,7 @@
 }
 
 .dropdown {
-  position: relative;
+  position: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -57,11 +59,13 @@
 }
 
 .dropdownButton {
+  position: absolute;
   display: none;
   background: transparent;
   color: transparent;
   border: none;
   cursor: pointer;
+  left: 3px;
 }
 
 .dropdownMenu {
@@ -74,6 +78,7 @@
   background-color: var(--navBar-color);
   padding: 10px 0;
   margin: 0;
+  margin-top: 35px;
   min-width: 150px;
   z-index: 998;
   border-top: 0;
@@ -105,13 +110,80 @@
   color: var(--button-gradient-color);
 }
 
-@media (max-width: 915px) {
+.langSwitchContainer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  align-items: center;
+}
+
+.langSwitch {
+  width: 45px;
+  height: 45px;
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
+}
+
+.langSwitchContainer p {
+  margin-top: -3px;
+  font-weight: bold;
+  user-select: none;
+}
+
+.langSwitch:hover {
+  cursor: pointer;
+}
+
+.animateLeft {
+  animation: slideInLeft 2s ease-in forwards;
+  will-change: opacity;
+}
+
+.animateFade {
+  animation: fadeIn 2s ease-in forwards;
+  will-change: opacity;
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 934px) {
   .navBar {
     justify-content: flex-start;
-    padding-left: 8px;
+  }
+
+  .langSwitchContainer {
+    position: absolute;
+    right: -5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dropdown {
+    position: absolute;
   }
 
   .dropdownButton {
+    position: absolute;
     display: flex;
     justify-content: center;
   }
@@ -121,7 +193,7 @@
   }
 }
 
-@media (min-width: 916px) {
+@media (min-width: 935px) {
   .dropdownMenu {
     display: none;
   }

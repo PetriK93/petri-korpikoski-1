@@ -1,4 +1,5 @@
 import styles from "./ProjectsStyles.module.css";
+
 import moonveilMarket from "../../assets/moonveil_market.jpg";
 import ProjectCard from "../../common/ProjectCard";
 import freshBurger from "../../assets/fresh-burger.png";
@@ -7,8 +8,8 @@ import fitLift from "../../assets/fitlift.png";
 
 function Projects({ language }) {
   return (
-    <section id="projects" className={styles.container}>
-      <h1 id="projects" className={styles.sectionTitle}>
+    <section className={styles.container}>
+      <h1 id="projects" className="sectionTitle">
         {language === "en" ? "Projects" : "Projektit"}
       </h1>
       <div className={styles.projectsContainer}>

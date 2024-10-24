@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin-bottom: -30px;
 
   span {
     display: flex;
@@ -34,14 +35,6 @@
   align-self: center;
 }
 
-.certificationsContainer hr {
-  width: 120px;
-  height: 1px;
-  border: none;
-  background-color: var(--text-color);
-  margin: 30px auto 0;
-}
-
 @media (width >= 800px) {
   .skillList {
     max-width: fit-content;
@@ -51,11 +44,6 @@
     p {
       font-size: 20px;
     }
-  }
-
-  .certificationsContainer hr {
-    width: 300px;
-    margin-bottom: -30px;
   }
 }
 
@@ -69,16 +57,4 @@
       font-size: 21px;
     }
   }
-
-  .certificationsContainer hr {
-    width: 300px;
-    margin-bottom: -140px;
-  }
-}
-
-.sectionTitle {
-  position: relative;
-  margin-bottom: 60px;
-  padding-bottom: 10px;
-  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.6);
 }

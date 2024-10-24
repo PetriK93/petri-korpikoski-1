@@ -12,21 +12,23 @@ export const ThemeProvider = ({ children }) => {
     return savedTheme || "dark";
   });
 
-  /* OLD CODE
-export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState(
-    () => localStorage.getItem("theme") || "light"
-  );
-
-  */
   useEffect(() => {
     document.body.setAttribute("data-theme", theme);
     localStorage.setItem("theme", theme);
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+    setTheme((prevTheme) => {
+      const newTheme = prevTheme === "light" ? "dark" : "light";
+      console.log("Toggling theme to:", newTheme); // Log the new theme
+      return newTheme;
+    });
   };
+
+  // Optional useEffect to log whenever theme changes
+  useEffect(() => {
+    console.log("Current theme:", theme);
+  }, [theme]);
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>

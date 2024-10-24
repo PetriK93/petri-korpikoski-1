@@ -31,8 +31,8 @@ function Skills({ language }) {
   const obsIcon = theme === "light" ? obsLight : obsDark;
 
   return (
-    <section id="skills" className={styles.container}>
-      <h1 id="skills" className={styles.sectionTitle}>
+    <section className={styles.container}>
+      <h1 id="skills" className="sectionTitle">
         {language === "en" ? "Tech stack" : "Teknologiat"}
       </h1>
       <div className={styles.rowWrapper}>
@@ -51,8 +51,8 @@ function Skills({ language }) {
           <SkillList src={gitHubIcon} skill="Github" />
         </div>
       </div>
-      <hr />
-      <h1 className={styles.sectionTitle}>
+
+      <h1 className="sectionTitle">
         {language === "en"
           ? "Other useful tech skills"
           : "Muita hyödyllisiä teknisiä taitoja"}
@@ -107,8 +107,8 @@ function Skills({ language }) {
           }
         />
       </div>
-      <hr />
-      <h1 className={styles.sectionTitle}>
+
+      <h1 className="sectionTitle">
         {language === "en"
           ? "Soft & general skills"
           : "Pehmeät & yleiset taidot"}
@@ -164,7 +164,6 @@ function Skills({ language }) {
           }
         />
       </div>
-      <hr />
     </section>
   );
 }

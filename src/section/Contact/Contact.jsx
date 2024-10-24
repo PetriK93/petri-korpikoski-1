@@ -2,8 +2,8 @@ import styles from "./ContactStyles.module.css";
 
 function Contact({ language }) {
   return (
-    <section id="contact" className={styles.container}>
-      <h1 id="contact" className={styles.sectionTitle}>
+    <section className={styles.container}>
+      <h1 id="contact" className="sectionTitle">
         {language === "en" ? "Contact" : "Ota yhteyttä"}
       </h1>
       <form action="https://formspree.io/f/mpwanrek" method="POST">

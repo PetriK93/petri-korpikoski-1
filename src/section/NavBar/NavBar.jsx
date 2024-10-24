@@ -3,8 +3,11 @@ import styles from "./NavBarStyles.module.css";
 import { useTheme } from "../../common/ThemeContext";
 import menuIconLight from "../../assets/menu_icon_light.png";
 import menuIconDark from "../../assets/menu_icon_dark.png";
+import finIcon from "../../assets/finIcon.png";
+import enIcon from "../../assets/enIcon.png";
 
-const NavBar = ({ language }) => {
+const NavBar = ({ language, toggleLanguage }) => {
+  const langIcon = language === "en" ? enIcon : finIcon;
   const [dropdown, setDropdown] = useState(false);
   const { theme } = useTheme();
   const menuIcon = theme === "light" ? menuIconLight : menuIconDark;
@@ -39,7 +42,7 @@ const NavBar = ({ language }) => {
   };
 
   return (
-    <nav className={styles.navBar}>
+    <nav className={`${styles.navBar} ${styles.animateFade}`}>
       <div className={styles.dropdown}>
         <button className={styles.dropdownButton} onClick={toggleDropdown}>
           <img src={menuIcon} alt="Menu icon" />
@@ -75,7 +78,7 @@ const NavBar = ({ language }) => {
         )}
       </div>
 
-      <ul className={styles.navigation}>
+      <ul className={`${styles.navigation} ${styles.animateLeft}`}>
         <li className={styles.navigationItem}>
           <a onClick={() => scrollToSection("about")}>
             {language === "en" ? "About" : "Tietoa minusta"}
@@ -102,6 +105,15 @@ const NavBar = ({ language }) => {
           </a>
         </li>
       </ul>
+      <div id="langSwitch" className={styles.langSwitchContainer}>
+        <img
+          src={langIcon}
+          className={styles.langSwitch}
+          alt="Language switch"
+          onClick={toggleLanguage}
+        />
+        <p className={styles.bold}>{language === "en" ? "En" : "Fi"}</p>
+      </div>
     </nav>
   );
 };

@@ -49,18 +49,3 @@
   max-width: 34ch;
   align-self: center;
 }
-
-hr {
-  width: 120px;
-  height: 1px;
-  border: none;
-  background-color: var(--text-color);
-  margin: 30px auto 50px;
-}
-
-.sectionTitle {
-  position: relative;
-  margin-bottom: 60px;
-  padding-bottom: 10px;
-  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.6);
-}

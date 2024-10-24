@@ -4,8 +4,8 @@ import SkillList from "../../common/SkillList";
 
 function Certifications({ language }) {
   return (
-    <section id="certifications" className={styles.certificationsContainer}>
-      <h1 id="certifications" className={styles.sectionTitle}>
+    <section className={styles.certificationsContainer}>
+      <h1 id="certifications" className="sectionTitle">
         {language === "en" ? "Certifications" : "Sertifikaatiot"}
       </h1>
       <div className={styles.rowWrapper}>
@@ -40,7 +40,6 @@ function Certifications({ language }) {
           />
         </div>
       </div>
-      <hr />
     </section>
   );
 }

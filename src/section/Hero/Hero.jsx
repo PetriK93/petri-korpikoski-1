@@ -2,8 +2,6 @@ import styles from "./HeroStyles.module.css";
 import heroImg from "../../assets/portfolio logo.png";
 import sun from "../../assets/sun.svg";
 import moon from "../../assets/moon.svg";
-import finIcon from "../../assets/finIcon.png";
-import enIcon from "../../assets/enIcon.png";
 import twitterLight from "../../assets/twitter-light.svg";
 import twitterDark from "../../assets/twitter-dark.svg";
 import githubLight from "../../assets/github-light.svg";
@@ -13,17 +11,16 @@ import linkedinDark from "../../assets/linkedin-dark.svg";
 import CV from "../../assets/Petri_Korpikoski_CV.pdf";
 import { useTheme } from "../../common/ThemeContext";
 
-function Hero({ language, toggleLanguage }) {
+function Hero({ language }) {
   const { theme, toggleTheme } = useTheme();
 
   const themeIcon = theme === "light" ? sun : moon;
   const twitterIcon = theme === "light" ? twitterLight : twitterDark;
   const githubIcon = theme === "light" ? githubLight : githubDark;
   const linkedinIcon = theme === "light" ? linkedinLight : linkedinDark;
-  const langIcon = language === "en" ? enIcon : finIcon;
 
   return (
-    <section id="hero" className={styles.container}>
+    <section id="hero" className={`${styles.container} ${styles.animate}`}>
       <div className={styles.colorModeContainer}>
         <img
           className={styles.hero}
@@ -36,15 +33,6 @@ function Hero({ language, toggleLanguage }) {
           alt="Color mode icon"
           onClick={toggleTheme}
         />
-        <div id="langSwitch" className={styles.langSwitchContainer}>
-          <img
-            src={langIcon}
-            className={styles.langSwitch}
-            alt="Language switch"
-            onClick={toggleLanguage}
-          />
-          <p className={styles.bold}>{language === "en" ? "En" : "Fi"}</p>
-        </div>
       </div>
       <div className={styles.info}>
         <h1 id="about" className={styles.nameTitle}>

@@ -13,6 +13,21 @@
   --text-color-swap: #222;
 }
 
+[data-theme="light"] {
+  --background-color: #fff;
+  --btn-color: #0987f2;
+  --btn-text-color: #fff;
+  --project-card-bg: #ffffff00;
+  --text-color: #222;
+  --form-text-color: #555;
+  --footer-text-color: #888;
+  --navBar-color: rgb(201, 201, 201);
+  --button-color-gradient-light: var(--btn-color);
+  --button-color-gradient-dark: red;
+  --button-gradient-color: var(--button-color-gradient-light);
+  --text-color-swap: #222;
+}
+
 [data-theme="dark"] {
   --background-color: #222;
   --btn-color: #fff;
@@ -26,17 +41,21 @@
   --text-color-swap: #fff;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: #222;
   background-color: var(--background-color);
   margin: 0 0 60px;
   padding: 0;
   scroll-snap-type: none;
   scroll-padding-top: 80px;
+  overflow-x: hidden;
 }
 
 #root {
@@ -45,7 +64,22 @@ body {
   gap: 60px;
 }
 
-h1,
+h1 {
+  will-change: color;
+  position: relative;
+  z-index: 900;
+  margin: 0;
+  padding: 0;
+}
+
+.sectionTitle {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  position: relative;
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+  color: var(--text-color-swap);
+}
+
 h2,
 h3,
 p {
@@ -85,8 +119,9 @@ p {
 }
 
 @media (width >= 800px) {
-  #root {
-    gap: 100px;
+  .sectionTitle {
+    margin-top: 60px;
+    margin-bottom: 60px;
   }
   h1 {
     font-size: 40px;
@@ -100,15 +135,12 @@ p {
   }
 
   @media (width >= 1400px) {
-    #root {
-      gap: 200px;
+    .sectionTitle {
+      margin-top: 80px;
+      margin-bottom: 65px;
     }
     h1 {
       font-size: 49px;
-    }
-
-    .sectionTitle {
-      margin-bottom: 75px;
     }
   }
 }

@@ -1,4 +1,5 @@
 .container {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -7,6 +8,8 @@
   height: 100vh;
   min-height: 500px;
   margin-top: 20px;
+  overflow-x: none;
+  will-change: opacity;
 
   .hero {
     max-width: 200px;
@@ -60,7 +63,8 @@
 
 .nameTitle {
   position: relative;
-  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.6);
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+  color: var(--text-color);
 }
 .colorModeContainer {
   position: relative;
@@ -224,12 +228,6 @@ a[type="linkedin"]:hover {
   --fill: 100%;
 }
 
-.bold {
-  margin-top: -3px;
-  font-weight: bold;
-  user-select: none;
-}
-
 h2 {
   position: relative;
   text-align: center;
@@ -260,6 +258,19 @@ h2:hover::after {
     0 0 25px var(--button-gradient-color), 0 0 50px var(--button-gradient-color),
     0 0 100px var(--button-gradient-color),
     0 0 200px var(--button-gradient-color);
+}
+
+.animate {
+  animation: animate 3s ease-in forwards;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @media (min-width: 320px) {
