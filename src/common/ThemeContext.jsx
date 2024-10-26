@@ -9,7 +9,7 @@ export const ThemeProvider = ({ children }) => {
     // Check if a theme is stored in localStorage
     const savedTheme = localStorage.getItem("theme");
     // If no theme is saved, default to dark
-    return savedTheme || "dark";
+    return savedTheme || "light";
   });
 
   useEffect(() => {

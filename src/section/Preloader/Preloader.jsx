@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./PreloaderStyles.module.css";
-import preloader from "./../../assets/preloader.gif";
+import preloader from "./../../assets/preloader_icon.png";
 
 function Preloader({ onComplete }) {
   const [isFadingOut, setIsFadingOut] = useState(false);

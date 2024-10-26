@@ -10,6 +10,7 @@
   margin-top: 20px;
   overflow-x: none;
   will-change: opacity;
+  margin-bottom: 80px;
 
   .hero {
     max-width: 200px;
@@ -68,6 +69,7 @@
 }
 .colorModeContainer {
   position: relative;
+  margin-top: 80px;
 }
 
 .colorMode {
@@ -248,7 +250,7 @@ h2::after {
 }
 
 h2:hover {
-  color: var(--text-color-swap);
+  color: var(--text-color);
   display: inline-block;
 }
 
@@ -462,13 +464,13 @@ h2:hover::after {
 
 @media (orientation: portrait) and (min-height: 710px) and (max-height: 759px) {
   .container {
-    margin-top: 75px;
+    margin-top: 120px;
   }
 }
 
 @media (orientation: portrait) and (min-height: 760px) and (max-height: 805px) {
   .container {
-    margin-top: 50px;
+    margin-top: 80px;
   }
 }
 

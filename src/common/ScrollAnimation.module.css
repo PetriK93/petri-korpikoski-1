@@ -1,0 +1,10 @@
+.scroll-animation {
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Optional: adds a subtle upward animation */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Smooth transition */
+}
+
+.scroll-animation.visible {
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Reset transform */
+}

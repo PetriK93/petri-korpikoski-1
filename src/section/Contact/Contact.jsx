@@ -1,8 +1,38 @@
 import styles from "./ContactStyles.module.css";
+import React, { useState, useEffect, useRef } from "react";
 
 function Contact({ language }) {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          console.log("Section visible, applying slideIn effect");
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.09 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
+
   return (
-    <section className={styles.container}>
+    <section
+      ref={ref}
+      className={`${styles.container} ${isVisible ? styles.zoomIn : ""}`}
+    >
       <h1 id="contact" className="sectionTitle">
         {language === "en" ? "Contact" : "Ota yhteyttä"}
       </h1>

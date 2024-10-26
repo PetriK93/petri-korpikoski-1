@@ -1,8 +1,10 @@
-.certificationsContainer {
+.container {
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin-bottom: -30px;
+  opacity: 0;
+  transform: translateX(50vw);
+  transition: opacity 1s ease, transform 1s ease;
 
   span {
     display: flex;
@@ -14,47 +16,108 @@
     width: 40px;
     height: 40px;
     aspect-ratio: 1 / 1;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+  }
+  img:hover {
+    animation: circleHover 0.5s ease-in-out infinite;
   }
 }
 
-.skillList {
+.certificationsList {
   display: flex;
   flex-direction: column;
   gap: 30px;
   align-items: center;
 }
 
-.skillList a {
+.certificationsList a {
   text-decoration: none;
 }
 
-.certificationsContainer .rowWrapper {
+.container .rowWrapper {
   display: flex;
   flex-direction: row;
   gap: 40px;
   align-self: center;
 }
 
-@media (width >= 800px) {
-  .skillList {
-    max-width: fit-content;
-    gap: 30px;
-    max-width: 75ch;
-
-    p {
-      font-size: 20px;
-    }
+@keyframes circleHover {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(3px, 0);
+  }
+  50% {
+    transform: translate(3px, 3px);
+  }
+  75% {
+    transform: translate(0, 3px);
+  }
+  100% {
+    transform: translate(0, 0);
   }
 }
 
-@media (width >= 1400px) {
-  .skillList {
-    max-width: fit-content;
-    gap: 32px;
-    max-width: 85ch;
+.hover-circle {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
 
-    p {
-      font-size: 21px;
-    }
+.hover-circle:hover {
+  animation: circleHover 0.5s ease-in-out infinite;
+}
+
+.slideIn {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (min-width: 800px) {
+  .certificationsList {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 40px;
+    max-width: 55ch;
+    flex-wrap: wrap;
+    text-align: start;
+  }
+
+  .certificationsList a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .certificationsList img {
+    margin-right: 80px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .certificationsList {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 40px;
+    max-width: 55ch;
+    flex-wrap: wrap;
+    text-align: start;
+  }
+
+  .certificationsList a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .certificationsList img {
+    margin-right: 80px;
   }
 }

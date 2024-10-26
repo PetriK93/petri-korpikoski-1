@@ -14,6 +14,7 @@
   justify-content: flex-end;
   margin-top: -1px;
   will-change: opacity;
+  max-width: 100vw;
 }
 
 .navigation {
@@ -78,11 +79,12 @@
   background-color: var(--navBar-color);
   padding: 10px 0;
   margin: 0;
-  margin-top: 35px;
+  margin-top: 40px;
   min-width: 150px;
   z-index: 998;
   border-top: 0;
   border-radius: 0 0 20px 0;
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.3);
 }
 
 .dropdownMenu li {
@@ -111,11 +113,12 @@
 }
 
 .langSwitchContainer {
-  position: absolute;
+  position: relative;
   display: flex;
   flex-direction: column;
-  margin-right: 10px;
+  margin-right: 15px;
   align-items: center;
+  z-index: 1000;
 }
 
 .langSwitch {
@@ -147,7 +150,7 @@
 
 @keyframes slideInLeft {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(-50vw);
     opacity: 0;
   }
   100% {
@@ -193,8 +196,45 @@
   }
 }
 
+@media (min-width: 800px) {
+  @keyframes slideInLeft {
+    0% {
+      transform: translateX(-50vw);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}
+
 @media (min-width: 935px) {
   .dropdownMenu {
     display: none;
+  }
+
+  @keyframes slideInLeft {
+    0% {
+      transform: translateX(-50vw);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  @keyframes slideInLeft {
+    0% {
+      transform: translateX(-50vw);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
   }
 }

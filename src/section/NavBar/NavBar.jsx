@@ -65,7 +65,7 @@ const NavBar = ({ language, toggleLanguage }) => {
               </a>
             </li>
             <li>
-              <a onClick={() => scrollToSection("skills")}>
+              <a onClick={() => scrollToSection("techSkills")}>
                 {language === "en" ? "Skills" : "Taidot"}
               </a>
             </li>
@@ -95,7 +95,7 @@ const NavBar = ({ language, toggleLanguage }) => {
           </a>
         </li>
         <li className={styles.navigationItem}>
-          <a onClick={() => scrollToSection("skills")}>
+          <a onClick={() => scrollToSection("techSkills")}>
             {language === "en" ? "Skills" : "Taidot"}
           </a>
         </li>
