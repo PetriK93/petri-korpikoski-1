@@ -27,16 +27,16 @@ function Footer({ language }) {
   const upArrow = theme === "light" ? upArrowLight : upArrowDark;
   return (
     <section id="footer" className={styles.container}>
-      <div
-        className={styles.arrowBox}
-        ref={arrowRef}
-        onMouseEnter={handleMouseEnter}
-        onAnimationEnd={handleAnimationEnd}
-      >
-        <a onClick={() => scrollToSection("about")}>
+      <a onClick={() => scrollToSection("about")}>
+        <div
+          className={styles.arrowBox}
+          ref={arrowRef}
+          onMouseEnter={handleMouseEnter}
+          onAnimationEnd={handleAnimationEnd}
+        >
           <img src={upArrow} alt="Up arrow box" />
-        </a>
-      </div>
+        </div>
+      </a>
       <p>
         &copy; 2024 Petri Korpikoski.
         <br />
