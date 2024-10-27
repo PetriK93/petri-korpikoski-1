@@ -1,4 +1,5 @@
 .container {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,6 +10,54 @@
   align-self: center;
   padding-top: 30px;
   padding-bottom: 5px;
+  z-index: 999;
+}
+
+.arrowBox {
+  position: absolute;
+  z-index: 1000;
+  background-color: var(--arrowBox-color);
+  width: 45px;
+  max-width: 45px;
+  height: 50px;
+  max-height: 50px;
+  top: -25%;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.arrowBox img {
+  position: absolute;
+  z-index: 1001;
+  background-color: transparent;
+  width: 35px;
+  height: 35px;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.arrowBox.active {
+  animation: bounce 2s cubic-bezier(0.28, 0.84, 0.42, 1);
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate(-50%, 0);
+  }
+  30% {
+    transform: translate(-50%, -15px);
+  }
+  50% {
+    transform: translate(-50%, 0);
+  }
+  70% {
+    transform: translate(-50%, -5px);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
 }
 
 .container p {
@@ -19,4 +68,34 @@
 
 a {
   color: var(--footer-text-color);
+}
+
+@media (min-width: 0px) and (max-width: 439px) {
+  .arrowBox {
+    top: -16%;
+  }
+}
+
+@media (min-width: 440px) and (max-width: 514px) {
+  .arrowBox {
+    top: -18%;
+  }
+}
+
+@media (min-width: 515px) and (max-width: 799px) {
+  .arrowBox {
+    top: -19%;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 982px) {
+  .arrowBox {
+    top: -20%;
+  }
+}
+
+@media (min-width: 983px) {
+  .arrowBox {
+    top: -28px;
+  }
 }
