@@ -275,6 +275,18 @@ h2:hover::after {
   }
 }
 
+@media (min-width: 0px) {
+  .colorModeContainer::after,
+  .colorModeContainer::before {
+    height: 190px;
+    width: 190px;
+    padding: 12px;
+  }
+  .colorMode {
+    right: 23px;
+  }
+}
+
 @media (min-width: 320px) {
   .container {
     margin-top: 3vh;
