@@ -15,3 +15,4 @@ Features
 Responsive Design: Optimized for various screen sizes and devices
 Dynamic Components: Built with React for a smooth and interactive user experience
 Custom Styling: Using modern CSS techniques for visually appealing designs
+![nimetön](https://github.com/user-attachments/assets/ec72fc41-b9da-4ace-bc61-4daf8a8d1213)
