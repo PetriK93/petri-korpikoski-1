@@ -40,9 +40,7 @@ function Hero({ language }) {
           <br />
           Korpikoski
         </h1>
-        <h2>
-          {language === "en" ? "Frontend Developer" : "Frontend-kehittäjä"}
-        </h2>
+        <h2>{language === "en" ? "ICT-student" : "Insinööriopiskelija"}</h2>
         <span>
           <a type="twitter" href="https://x.com/Petrik_Dev" target="_blank">
             <img src={twitterIcon} alt="Twitter icon" />
@@ -60,8 +58,8 @@ function Hero({ language }) {
         </span>
         <p className={styles.description}>
           {language === "en"
-            ? "React developer with a passion for creating artistically pleasing and functionally seamless user experiences for businesses and individuals."
-            : "React-kehittäjä, jolla on intohimo luoda taiteellisesti miellyttäviä ja toiminnallisesti saumattomia käyttäjäkokemuksia yrityksille ja yksityishenkilöille."}
+            ? "ICT-student in Lapland University of Applied Sciences. Most interested in full-stack development."
+            : "Tieto-ja viestintätekniikan insinööriopiskelija Lapin AMK:ssa. Suuntautunut full-stack kehitykseen."}
         </p>
         <a href={CV} download>
           <button className="hover">

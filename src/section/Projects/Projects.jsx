@@ -1,10 +1,10 @@
 import styles from "./ProjectsStyles.module.css";
 import React, { useEffect, useRef, useState } from "react";
-import moonveilMarket from "../../assets/moonveil_market.jpg";
 import ProjectCard from "../../common/ProjectCard";
-import freshBurger from "../../assets/fresh-burger.png";
-import hipsster from "../../assets/hipsster.png";
-import fitLift from "../../assets/fitlift.png";
+import chronoFormatter from "../../assets/ChronoFormatter.jpg";
+import expenseTracker from "../../assets/ExpenseTracker.jpg";
+import azerothArchives from "../../assets/AzerothArchives.jpg";
+import finShift from "../../assets/FinShift.jpg";
 
 function Projects({ language }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -43,34 +43,70 @@ function Projects({ language }) {
       </h1>
       <div className={styles.projectsContainer}>
         <ProjectCard
-          src={moonveilMarket}
-          link="https://github.com/PetriK93/Moonveil-Market"
-          h3="Moonveil Market"
+          src={chronoFormatter}
+          link="https://github.com/PetriK93/ChronoFormatter"
+          h3="ChronoFormatter"
           p={
-            language === "en"
-              ? "Fantasy RPG Marketplace"
-              : "Fantasia RPG Markkinatori"
+            language === "en" ? (
+              <>
+                File Renamer
+                <br />
+                for Images & Videos
+              </>
+            ) : (
+              <>
+                Kuvien & videoiden
+                <br />
+                Uudelleennimeäjä
+              </>
+            )
           }
         />
         <ProjectCard
-          src={freshBurger}
-          link="https://github.com/PetriK93?tab=repositories"
-          h3="(PLACEHOLDER)"
+          src={expenseTracker}
+          link="https://github.com/PetriK93/ExpenseTracker"
+          h3="Expense Tracker"
           p={
-            language === "en" ? "Hamburger Restaurant" : "Hampurilaisravintola"
+            language === "en" ? (
+              <>
+                Track Your Daily
+                <br />
+                Expenses Easily
+              </>
+            ) : (
+              <>
+                Seuraa Päivittäisiä
+                <br />
+                Kuluja Helposti
+              </>
+            )
           }
         />
         <ProjectCard
-          src={hipsster}
-          link="https://github.com/PetriK93?tab=repositories"
-          h3="(PLACEHOLDER)"
-          p={language === "en" ? "Optical Store" : "Optikkoliike"}
+          src={azerothArchives}
+          link="https://github.com/PetriK93/AzerothArchives"
+          h3="Azeroth Archives"
+          p={
+            language === "en" ? (
+              <>
+                Get Character Data
+                <br />
+                In WoW: Classic Era
+              </>
+            ) : (
+              <>
+                Hae Hahmodataa
+                <br />
+                WoW: Classic Erassa
+              </>
+            )
+          }
         />
         <ProjectCard
-          src={fitLift}
-          link="https://github.com/PetriK93?tab=repositories"
-          h3="(PLACEHOLDER)"
-          p={language === "en" ? "Fitness App" : "Fitness Äppi"}
+          src={finShift}
+          link="https://github.com/PetriK93/FinShift"
+          h3="FinShift"
+          p={language === "en" ? "Scheduling Manager" : "Aikataulunhallinta"}
         />
       </div>
     </section>

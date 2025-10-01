@@ -51,15 +51,15 @@ function SoftSkills({ language }) {
             src={checkMarkIcon}
             skill={
               language === "en"
-                ? "Native level english in both reading and speaking."
-                : "Englanti on käytännössä toinen äidinkieli."
+                ? "English is second nature to me."
+                : "Englannin käyttö on hyvin luontevaa minulle."
             }
           />
           <SkillList
             src={checkMarkIcon}
             skill={
               language === "en"
-                ? "Plenty of experience in customer service."
+                ? "A lot of experience in customer service."
                 : "Paljon kokemusta asiakaspalvelusta."
             }
             className={styles.break}
@@ -68,32 +68,32 @@ function SoftSkills({ language }) {
             src={checkMarkIcon}
             skill={
               language === "en"
-                ? "Punctual. I pay attention to the little details, but I also don't lose sight of the bigger picture."
-                : "Täsmällinen. Kiinnitän huomiota pieniin yksityiskohtiin, mutta en myöskään unohda suurempaa kokonaiskuvaa."
+                ? "Punctual and curious."
+                : "Täsmällinen ja utelias."
             }
           />
           <SkillList
             src={checkMarkIcon}
             skill={
               language === "en"
-                ? "Well articulated and I can easily convey my thought processes to others."
-                : "Hyvä artikuloimaan omaa ajatusprosessia muille."
+                ? "I consider myself to be well articulated."
+                : "Pidän artikulointikykyäni melko hyvänä."
             }
           />
           <SkillList
             src={checkMarkIcon}
             skill={
               language === "en"
-                ? "Good At Finding Relevant Information autonomously."
-                : "Hyvä etsimään ja löytämään aihealueeseen liittyvää oleellista informaatiota itsenäisesti."
+                ? "I am used to finding information autonomously."
+                : "Olen tottunut etsimään tietoa itsenäisesti."
             }
           />
           <SkillList
             src={checkMarkIcon}
             skill={
               language === "en"
-                ? "Empathetic towards my co-workers. I always help when I can."
-                : "Empaattinen työkavereitani kohtaan. Autan aina kun vain pystyn."
+                ? "I prioritize the success of my team."
+                : "Priorisoin tiimini menestyksen."
             }
           />
         </div>
