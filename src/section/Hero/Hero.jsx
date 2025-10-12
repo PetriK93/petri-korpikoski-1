@@ -64,7 +64,7 @@ function Hero({ language, className }) {
         </span>
         <p className={styles.description}>
           {language === "en"
-            ? "ICT-student in Lapland University of Applied Sciences. Most interested in full-stack development."
+            ? "ICT Student in Lapland University of Applied Sciences. Most interested in full-stack development."
             : "Tieto-ja viestintätekniikan insinööriopiskelija Lapin AMK:ssa. Suuntautunut full-stack kehitykseen."}
         </p>
         <a href={CV} download>

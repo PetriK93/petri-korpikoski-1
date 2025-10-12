@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import styles from "./NavBarStyles.module.css";
 import { useTheme } from "../../common/ThemeContext";
 import menuIconLight from "../../assets/menu_icon_light.png";
@@ -11,6 +11,8 @@ const NavBar = ({ language, toggleLanguage }) => {
   const [dropdown, setDropdown] = useState(false);
   const { theme } = useTheme();
   const menuIcon = theme === "light" ? menuIconLight : menuIconDark;
+
+  const dropdownRef = useRef(null);
 
   {
     /*This offsets the navigation, so the NavBar doesn't
@@ -41,9 +43,23 @@ const NavBar = ({ language, toggleLanguage }) => {
     setDropdown(!dropdown);
   };
 
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdown(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <nav className={`${styles.navBar} ${styles.animateFade}`}>
-      <div className={styles.dropdown}>
+      <div className={styles.dropdown} ref={dropdownRef}>
         <button className={styles.dropdownButton} onClick={toggleDropdown}>
           <img src={menuIcon} alt="Menu icon" />
         </button>
