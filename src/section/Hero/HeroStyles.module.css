@@ -198,7 +198,7 @@ a[type="linkedin"]:hover {
   transition: width 0.8s ease;
   border-radius: 25px;
   transform: translateX(-50%);
-  max-width: 165px;
+  max-width: 168px;
 }
 
 .h2-en:hover {
@@ -207,7 +207,7 @@ a[type="linkedin"]:hover {
 }
 
 .h2-en:hover::after {
-  width: 55%;
+  width: 56%;
   box-shadow: 0 0 5px var(--button-gradient-color),
     0 0 25px var(--button-gradient-color), 0 0 50px var(--button-gradient-color),
     0 0 100px var(--button-gradient-color),

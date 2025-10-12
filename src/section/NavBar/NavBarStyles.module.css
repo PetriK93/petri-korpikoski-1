@@ -18,6 +18,9 @@
 }
 
 .navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   position: absolute;
   background-color: transparent;
   margin-right: 90px;

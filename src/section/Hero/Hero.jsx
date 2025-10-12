@@ -41,7 +41,7 @@ function Hero({ language, className }) {
           Korpikoski
         </h1>
         <h2 className={language === "en" ? styles["h2-en"] : styles["h2-fi"]}>
-          {language === "en" ? "ICT-student" : "Insinööriopiskelija"}
+          {language === "en" ? "ICT Student" : "Insinööriopiskelija"}
         </h2>
         <span>
           <a type="twitter" href="https://x.com/Petrik_Dev" target="_blank">
