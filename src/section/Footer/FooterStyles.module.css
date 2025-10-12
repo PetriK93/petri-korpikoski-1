@@ -21,7 +21,7 @@
   max-width: 45px;
   height: 50px;
   max-height: 50px;
-  top: -25%;
+  top: -57px;
   left: 50%;
   transform: translateX(-50%);
   cursor: pointer;
@@ -68,34 +68,4 @@
 
 a {
   color: var(--footer-text-color);
-}
-
-@media (min-width: 0px) and (max-width: 439px) {
-  .arrowBox {
-    top: -16%;
-  }
-}
-
-@media (min-width: 440px) and (max-width: 514px) {
-  .arrowBox {
-    top: -18%;
-  }
-}
-
-@media (min-width: 515px) and (max-width: 799px) {
-  .arrowBox {
-    top: -19%;
-  }
-}
-
-@media (min-width: 800px) and (max-width: 982px) {
-  .arrowBox {
-    top: -20%;
-  }
-}
-
-@media (min-width: 983px) {
-  .arrowBox {
-    top: -28px;
-  }
 }

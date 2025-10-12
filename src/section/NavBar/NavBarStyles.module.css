@@ -67,6 +67,7 @@
   border: none;
   cursor: pointer;
   left: 3px;
+  box-shadow: none;
 }
 
 .dropdownMenu {
@@ -175,7 +176,7 @@
   }
 }
 
-@media (max-width: 934px) {
+@media (max-width: 880px) {
   .navBar {
     justify-content: flex-start;
   }

@@ -3,8 +3,8 @@ import React, { useEffect, useRef, useState } from "react";
 import ProjectCard from "../../common/ProjectCard";
 import chronoFormatter from "../../assets/ChronoFormatter.jpg";
 import expenseTracker from "../../assets/ExpenseTracker.jpg";
-import azerothArchives from "../../assets/AzerothArchives.jpg";
 import finShift from "../../assets/FinShift.jpg";
+import ordoSorter from "../../assets/OrdoSorter.jpg";
 
 function Projects({ language }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -63,6 +63,26 @@ function Projects({ language }) {
           }
         />
         <ProjectCard
+          src={ordoSorter}
+          link="https://github.com/PetriK93/OrdoSorter"
+          h3="OrdoSorter"
+          p={
+            language === "en" ? (
+              <>
+                Organize your files
+                <br />
+                into subfolders
+              </>
+            ) : (
+              <>
+                Järjestele tiedostosi
+                <br />
+                omiin alikansioihinsa
+              </>
+            )
+          }
+        />
+        <ProjectCard
           src={expenseTracker}
           link="https://github.com/PetriK93/ExpenseTracker"
           h3="Expense Tracker"
@@ -83,30 +103,24 @@ function Projects({ language }) {
           }
         />
         <ProjectCard
-          src={azerothArchives}
-          link="https://github.com/PetriK93/AzerothArchives"
-          h3="Azeroth Archives"
-          p={
-            language === "en" ? (
-              <>
-                Get Character Data
-                <br />
-                In WoW: Classic Era
-              </>
-            ) : (
-              <>
-                Hae Hahmodataa
-                <br />
-                WoW: Classic Erassa
-              </>
-            )
-          }
-        />
-        <ProjectCard
           src={finShift}
           link="https://github.com/PetriK93/FinShift"
           h3="FinShift"
-          p={language === "en" ? "Scheduling Manager" : "Aikataulunhallinta"}
+          p={
+            language === "en" ? (
+              <>
+                Scheduling manager
+                <br />
+                for managing employees
+              </>
+            ) : (
+              <>
+                Työntekijöiden
+                <br />
+                vuorosuunnittelija
+              </>
+            )
+          }
         />
       </div>
     </section>

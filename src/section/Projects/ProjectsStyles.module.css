@@ -7,14 +7,11 @@
   transition: opacity 1s ease, transform 1s ease;
 
   img {
-    max-width: 250px;
-    align-self: center;
+    width: 250px; /* fix exact width */
+    height: 250px;
     background-color: var(--project-card-bg);
     border: 4px solid var(--project-card-border);
     border-radius: 20px;
-    width: 250px;
-    height: 250px;
-    aspect-ratio: 1 / 1;
   }
 
   h3 {

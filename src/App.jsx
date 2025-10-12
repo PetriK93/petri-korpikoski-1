@@ -8,7 +8,7 @@ import SoftSkills from "./section/Skills/SoftSkills";
 import Contact from "./section/Contact/Contact";
 import Footer from "./section/Footer/Footer";
 import Preloader from "./section/Preloader/Preloader";
-import heroImg from "./assets/Portfolio logo.png";
+import heroImg from "./assets/hero_img.png";
 import Certifications from "./section/Certifications/Certifications";
 import NavBar from "./section/NavBar/NavBar";
 
@@ -16,25 +16,24 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [language, setLanguage] = useState("en");
   const [isImageLoaded, setIsImageLoaded] = useState(false);
+  const [fadeInHero, setFadeInHero] = useState(false);
 
   useEffect(() => {
     const savedLanguage = localStorage.getItem("language") || "en";
     setLanguage(savedLanguage);
   }, []);
 
+  // Start loading hero image in the background — doesn't block preloader
   useEffect(() => {
     const img = new Image();
     img.src = heroImg;
-
-    // When the image has fully loaded, update the state
     img.onload = () => {
       setIsImageLoaded(true);
     };
   }, []);
 
-  // Conditional rendering based on whether the image is loaded
   if (!isImageLoaded) {
-    return null; // You can also return a loading spinner here if you want
+    return null;
   }
 
   const toggleLanguage = () => {
@@ -45,8 +44,10 @@ function App() {
     });
   };
 
+  // Fade in immediately when preloader completes
   const handlePreloaderComplete = () => {
     setLoading(false);
+    setTimeout(() => setFadeInHero(true), 50);
   };
 
   return (
@@ -56,7 +57,14 @@ function App() {
       ) : (
         <>
           <NavBar language={language} toggleLanguage={toggleLanguage} />
-          <Hero language={language} toggleLanguage={toggleLanguage} />
+          {/* Hero only renders after image is loaded */}
+          {isImageLoaded && (
+            <Hero
+              language={language}
+              toggleLanguage={toggleLanguage}
+              className={fadeInHero ? "fade-in" : ""}
+            />
+          )}
           <Projects language={language} toggleLanguage={toggleLanguage} />
           <Certifications language={language} toggleLanguage={toggleLanguage} />
           <TechSkills language={language} toggleLanguage={toggleLanguage} />

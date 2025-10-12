@@ -48,7 +48,7 @@ function Certifications({ language }) {
                   ? "Responsive Web Design"
                   : "Responsiivinen verkkosuunnittelu"
               }
-              link="https://www.freecodecamp.org/certification/PetriK93/responsive-web-design"
+              link="https://www.freecodecamp.org/certification/petrik93/responsive-web-design"
             />
             <SkillList
               src={certificationIcon}
@@ -67,7 +67,7 @@ function Certifications({ language }) {
                   </>
                 )
               }
-              link="https://www.freecodecamp.org/certification/PetriK93/javascript-algorithms-and-data-structures-v8"
+              link="https://www.freecodecamp.org/certification/petrik93/javascript-algorithms-and-data-structures-v8"
             />
           </div>
         </div>
