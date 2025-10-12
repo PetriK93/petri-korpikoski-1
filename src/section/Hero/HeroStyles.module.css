@@ -259,7 +259,7 @@ a[type="linkedin"]:hover {
   }
 }
 
-@media (max-width: 880px) {
+@media (max-width: 890px) {
   .container {
     flex-direction: column;
     gap: 5vw;
